@@ -48,15 +48,15 @@ const WorksFragment = () => {
                             <div className="bg-linear-to-br from-secondary-500 to-secondary-500/10 max-w-[550px] w-full h-auto rounded-lg py-10 pl-14 relative">
                                 <div className="border-l-2 border-l-primary-500 pt-3 pb-13 px-12">
                                     <TextElement type="xl_500" textColor='text-primary-0'>Register your Spend.In account.</TextElement>
-                                    <ButtonElement typeButton='label' label='1' textType='2xl_500' padding='' classname='w-13 h-13 absolute top-8 left-8'/>
+                                    <ButtonElement typeButton='label' label='1' textType='2xl_500' padding='' classname='w-13 h-13 absolute top-8 left-8' />
                                 </div>
                                 <div className="border-dashed border-l-2 border-l-primary-0  pt-3 pb-13 px-12">
                                     <TextElement type="xl_500" textColor='text-primary-0'>Fill in the list of your business expenses.</TextElement>
-                                    <ButtonElement typeButton='label' label='2' textType='2xl_500' padding='' classname='w-13 h-13 absolute top-30 left-8'/>
+                                    <ButtonElement typeButton='label' label='2' textType='2xl_500' padding='' classname='w-13 h-13 absolute top-30 left-8' />
                                 </div>
                                 <div className="px-12">
                                     <TextElement type="xl_500" textColor='text-primary-0'>Done, let’s continue the work.</TextElement>
-                                    <ButtonElement typeButton='label' label='3' bgColor='bg-primary-0' textColor='text-secondary-900' textType='2xl_500' padding='' classname='w-13 h-13 absolute top-52 left-8'/>
+                                    <ButtonElement typeButton='label' label='3' bgColor='bg-primary-0' textColor='text-secondary-900' textType='2xl_500' padding='' classname='w-13 h-13 absolute top-52 left-8' />
                                 </div>
                             </div>
                         </div>
