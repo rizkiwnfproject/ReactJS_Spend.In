@@ -23,7 +23,7 @@ const ButtonElement = ({
     image = "",
     alt = "",
     classnamePict = "",
-    format ="svg"
+    format = "svg"
 }) => {
     if (typeButton === "label") {
         return (
@@ -47,14 +47,14 @@ const ButtonElement = ({
         )
     } else if (typeButton === "icon") {
         return (
-            <button className={`${classname} ${bgColor} ${textColor} ${rounded} ${padding} ${elementHover} flex gap-2`} onClick={onClick}>
-                <Icon size={iconSize} className={`shrink-0 ${iconColor}`} />
+            <button ref={ref} className={`${classname} ${bgColor} ${textColor} ${rounded} ${padding} ${elementHover} flex gap-2`} onClick={onClick}>
+                {Icon && <Icon size={iconSize} className={`shrink-0 ${iconColor}`} />}
             </button>
         )
     } else if (typeButton === "svg") {
         return (
             <button className={`${classname} ${bgColor} ${textColor} ${rounded} ${padding} ${elementHover}`} onClick={onClick}>
-                <ImageElement path={path} image={image} name={alt} classname={classnamePict}  format={format}/>
+                <ImageElement path={path} image={image} name={alt} classname={classnamePict} format={format} />
             </button>
         )
     } else {
