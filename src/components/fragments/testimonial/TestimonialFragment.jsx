@@ -2,7 +2,7 @@ import TextElement from '../../elements/text/TextElement'
 import ButtonElement from '../../elements/button/ButtonElement'
 import ImageElement from '../../elements/image/ImageElement'
 import { HiArrowSmLeft, HiArrowSmRight, HiCheck } from 'react-icons/hi'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
@@ -44,6 +44,16 @@ const TestimonialFragment = () => {
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [swiperInstance, setSwiperInstance] = useState(null)
+
+  useEffect(() => {
+    if (swiperInstance) {
+      swiperInstance.params.navigation.prevEl = prevRef.current
+      swiperInstance.params.navigation.nextEl = nextRef.current
+      swiperInstance.navigation.init()
+      swiperInstance.navigation.update()
+    }
+  }, [swiperInstance])
   return (
     <>
       <div className="bg-secondary-700 py-20">
@@ -65,17 +75,10 @@ const TestimonialFragment = () => {
             <div className="w-full">
               <Swiper
                 className="mySwiper"
+                onSwiper={setSwiperInstance}
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
-                navigation={{
-                  prevEl: prevRef.current,
-                  nextEl: nextRef.current,
-                }}
-                onBeforeInit={(swiper) => {
-                  swiper.params.navigation.prevEl = prevRef.current
-                  swiper.params.navigation.nextEl = nextRef.current
-                }}
                 breakpoints={{
                   768: {
                     slidesPerView: 2,
