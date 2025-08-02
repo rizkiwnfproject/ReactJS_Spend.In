@@ -65,7 +65,7 @@ const TestimonialFragment = () => {
             <div className="w-full">
               <Swiper
                 modules={[Navigation]}
-                loop={true}
+                // loop={true}
                 spaceBetween={10}
                 slidesPerView={1}
                 navigation={{

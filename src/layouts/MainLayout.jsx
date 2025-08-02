@@ -1,7 +1,9 @@
 import ActionSection from "../components/sections/action/ActionSection"
 import BenefitSection from "../components/sections/benefit/BenefitSection"
+import FooterSection from "../components/sections/footer/FooterSection"
 import HeroSection from "../components/sections/hero/HeroSection"
 import NavbarSection from "../components/sections/navbar/NavbarSection"
+import PriceSection from "../components/sections/pricing/PriceSection"
 import StoriesSection from "../components/sections/stories/StoriesSection"
 import TestimonialSection from "../components/sections/testimonial/TestimonialSection"
 import WorkSection from "../components/sections/works/WorksSection"
@@ -28,7 +30,13 @@ const MainLayout = () => {
         <TestimonialSection />
       </div>
       <div className="">
+        <PriceSection />
+      </div>
+      <div className="">
         <ActionSection />
+      </div>
+      <div className="">
+        <FooterSection />
       </div>
     </>
   )

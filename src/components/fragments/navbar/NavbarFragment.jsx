@@ -3,6 +3,7 @@ import ButtonElement from "../../elements/button/ButtonElement"
 import ImageElement from "../../elements/image/ImageElement"
 import TextElement from "../../elements/text/TextElement"
 import { HiMenuAlt4 } from "react-icons/hi";
+import LogoElement from "../../elements/logo/LogoElement";
 
 const NavbarFragment = () => {
     const [open, setOpen] = useState(false);
@@ -12,11 +13,8 @@ const NavbarFragment = () => {
             <div className="py-0 lg:py-5">
                 <div className="w-full max-w-11/12 lg:max-w-10/12 mx-auto">
                     <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-1.5 lg:gap-3.5 py-5 lg:py-0">
-                            <ImageElement path="logo" image="logo" name="logo" classname="w-6 lg:w-auto" />
-                            <TextElement textColor="text-primary-100" type="2xl_700">Spend.In</TextElement>
-                        </div>
-                        <ButtonElement typeButton="icon" icon={HiMenuAlt4} bgColor=""  classname="block lg:hidden" onClick={() => setOpen(!open)} />
+                        <LogoElement image='logo-1' textColor='text-primary-100'/>
+                        <ButtonElement typeButton="icon" icon={HiMenuAlt4} bgColor="" classname="block lg:hidden" onClick={() => setOpen(!open)} />
                         <ul className="hidden lg:flex items-center justify-between gap-6">
                             <li>
                                 <TextElement textColor="text-primary-0" type="lg_500">Product</TextElement>
