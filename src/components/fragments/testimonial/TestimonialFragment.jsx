@@ -64,10 +64,10 @@ const TestimonialFragment = () => {
             </div>
             <div className="w-full">
               <Swiper
-                modules={[Navigation]}
-                // loop={true}
-                spaceBetween={10}
+                className="mySwiper"
                 slidesPerView={1}
+                spaceBetween={30}
+                loop={true}
                 navigation={{
                   prevEl: prevRef.current,
                   nextEl: nextRef.current,
@@ -84,6 +84,7 @@ const TestimonialFragment = () => {
                     slidesPerView: 3,
                   }
                 }}
+                modules={[Navigation]}
               >
                 {testimonials.map((item, idx) => (
                   <SwiperSlide key={idx}>
