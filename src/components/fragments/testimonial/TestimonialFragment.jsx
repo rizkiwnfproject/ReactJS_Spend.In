@@ -56,19 +56,19 @@ const TestimonialFragment = () => {
   }, [swiperInstance])
   return (
     <>
-      <div className="bg-secondary-700 py-20">
-        <div className="w-full max-w-11/12 lg:max-w-10/12 mx-auto max-h-screen">
-          <div className="flex flex-col w-full mx-auto items-center justify-center gap-16">
-            <div className="flex flex-col gap-6 text-center max-w-[580px]">
-              <div className="flex flex-col gap-3">
-                <TextElement type="xl_600" textColor="text-primary-500" textTransform="uppercase" classname="">
+      <div className="bg-secondary-700 py-10 lg:py-20">
+        <div className="w-full max-w-10/12 lg:max-w-10/12 mx-auto max-h-screen">
+          <div className="flex flex-col w-full mx-auto items-center justify-center gap-8 lg:gap-16">
+            <div className="flex flex-col gap-3 lg:gap-6 lg:text-center max-w-[580px]">
+              <div className="flex flex-col gap-1.5 lg:gap-3">
+                <TextElement type="xl_600" respText='text-xs' textColor="text-primary-500" textTransform="uppercase" classname="">
                   WHAT THEY SAY
                 </TextElement>
-                <TextElement type="5xl_700" textColor="text-primary-0" textTransform="" classname="">
+                <TextElement type="5xl_700" respText='text-2xl'  textColor="text-primary-0" textTransform="" classname="">
                   Our User Kind Words
                 </TextElement>
               </div>
-              <TextElement type="xl_400" textColor="text-secondary-400" textTransform="" classname="max-w-[740px]">
+              <TextElement type="xl_400" respText='text-sm' textColor="text-secondary-400" textTransform="" classname="max-w-[740px]">
                 Here are some testimonials from our user after using Spend.In to manage their business  expenses.
               </TextElement>
             </div>
@@ -91,16 +91,16 @@ const TestimonialFragment = () => {
               >
                 {testimonials.map((item, idx) => (
                   <SwiperSlide key={idx}>
-                    <div className="flex flex-col justify-between bg-secondary-500 w-full h-[370px] rounded-xl p-8">
+                    <div className="flex flex-col justify-between bg-secondary-500 w-full h-[340px] lg:h-[370px] rounded-xl p-8">
                       <div className="flex flex-col gap-4">
                         <TextElement type='lg_600' textColor='text-primary-0'>{item.title}</TextElement>
-                        <TextElement type='md_500' textColor='text-primary-0'>{item.content}</TextElement>
+                        <TextElement type='md_500' respText='text-sm' textColor='text-primary-0'>{item.content}</TextElement>
                       </div>
                       <div className="flex items-center pt-8 gap-6 border-t border-t-secondary-300/20">
                         <ImageElement path='user' image={item.image} name={item.name} classname='w-17.5 h-17.5 rounded-lg' />
                         <div className="flex flex-col gap-0">
                           <TextElement type='lg_700' textColor='text-primary-0'>{item.name}</TextElement>
-                          <TextElement type='sm_400' textColor='text-secondary-200'>{item.position}</TextElement>
+                          <TextElement type='sm_400' respText='text-xs' textColor='text-secondary-200'>{item.position}</TextElement>
                         </div>
                       </div>
                     </div>

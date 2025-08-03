@@ -12,7 +12,8 @@ const IconLabel = ({
     bgIcon,
     iconSize,
     padding,
-    textTransform
+    textTransform,
+    respText
 }) => {
     return (
         <div className={`flex gap-3 ${classname}`}>
@@ -25,6 +26,7 @@ const IconLabel = ({
                 classname={classnameButton} />
             <TextElement
                 type={textType}
+                respText={respText}
                 textColor={textColor}
                 textTransform={textTransform}
                 classname={classnameText}>

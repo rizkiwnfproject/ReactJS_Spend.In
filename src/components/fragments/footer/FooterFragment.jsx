@@ -45,38 +45,39 @@ const FooterFragment = () => {
     ];
     return (
         <>
-            <div className="bg-primary-0 py-30">
-                <div className="w-full max-w-11/12 lg:max-w-10/12 mx-auto max-h-screen">
-                    <div className="grid grid-cols-6 w-full pb-16">
-                        <div className="col-span-2 flex flex-col gap-8">
-                            <LogoElement image='logo-2' textColor='text-secondary-500' />
-                            <TextElement type="lg_400" classname="w-[200px]" textColor="text-secondary-400">Data visualization, and expense management for your business.</TextElement>
+            <div className="bg-primary-0 py-3 lg:py-30">
+                <div className="w-full max-w-11/12 lg:max-w-10/12 mx-auto lg:max-h-screen px-1">
+                    <div className="grid grid-cols-2 lg:grid-cols-6 w-full gap-6 lg:gap-0 pb-8 lg:pb-16">
+                        <div className="col-span-2 flex flex-col gap-3 lg:gap-8">
+                            <LogoElement image='logo-2' textColor='text-secondary-500'  />
+                            <TextElement type="lg_400" respText="text-lg" classname="w-[200px]" textColor="text-secondary-400">Data visualization, and expense management for your business.</TextElement>
                         </div>
                         {footerMenu.map((item, index) => (
-                            <div key={index} className="flex flex-col gap-8">
-                                <TextElement type="xl_600" textColor="text-secondary-500">{item.title}</TextElement>
-                                <ul className="flex flex-col gap-6">
-                                    {item.links.map((link, idx) => (
-                                        <li key={idx}>
-                                            <a href="#" className="">
-                                                <TextElement type="md_400" textColor="text-secondary-400 hover:text-secondary-600">{link}</TextElement>
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
+                            <div className="mt-8">
+                                <div key={index} className="flex flex-col gap-8">
+                                    <TextElement type="xl_600" respText="text-xl" textColor="text-secondary-500">{item.title}</TextElement>
+                                    <ul className="flex flex-col gap-6">
+                                        {item.links.map((link, idx) => (
+                                            <li key={idx}>
+                                                <a href="#" className="">
+                                                    <TextElement type="md_400" textColor="text-secondary-400 hover:text-secondary-600">{link}</TextElement>
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         ))}
                     </div>
-                    <div className="border-t border-t-primary-200 pt-8 flex justify-between w-full">
-                        <div className="flex gap-8">
-                            <TextElement type="lg_600" textColor="text-secondary-500">Privacy Policy</TextElement>
-                            <TextElement type="lg_500" textColor="text-secondary-500">|</TextElement>
-                            <TextElement type="lg_600" textColor="text-secondary-500">Terms & Conditions</TextElement>
-                            <TextElement type="lg_500" textColor="text-secondary-500">|</TextElement>
-                            <TextElement type="lg_600" textColor="text-secondary-500">Cookie Policy</TextElement>
+                    <div className="border-t border-t-primary-200 pt-8 pb-4 lg:pb-0 flex flex-col lg:flex-row lg:justify-between w-full gap-12">
+                        <div className="flex flex-col lg:flex-row gap-8">
+                            <TextElement type="lg_600" respText="text-lg" textColor="text-secondary-500">Privacy Policy</TextElement>
+                            <TextElement type="lg_500" textColor="text-secondary-500" classname="hidden lg:block">|</TextElement>
+                            <TextElement type="lg_600" respText="text-lg" textColor="text-secondary-500">Terms & Conditions</TextElement>
+                            <TextElement type="lg_500" textColor="text-secondary-500" classname="hidden lg:block">|</TextElement>
+                            <TextElement type="lg_600" respText="text-lg" textColor="text-secondary-500">Cookie Policy</TextElement>
                         </div>
                         <TextElement type="md_500" textColor="text-secondary-400">© Picko Lab 2022</TextElement>
-
                     </div>
                 </div>
             </div>

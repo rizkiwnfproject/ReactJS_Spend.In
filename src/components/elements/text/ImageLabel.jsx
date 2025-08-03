@@ -12,13 +12,15 @@ const ImageLabel = ({
     classnameText,
     textType,
     textColor,
-    textTransform
+    textTransform,
+    respText
 }) => {
     return (
         <div className={`flex gap-3 ${classname}`}>
             <ImageElement path={path} image={image} format={format} name={alt} classname={classnameImage}/>
             <TextElement
                 type={textType}
+                respText={respText}
                 textColor={textColor}
                 textTransform={textTransform}
                 classname={classnameText}>

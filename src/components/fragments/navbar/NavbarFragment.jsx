@@ -37,8 +37,8 @@ const NavbarFragment = () => {
                             <ButtonElement typeButton="label" textColor="text-primary-0" label="Get Demo" />
                         </div>
                     </div>
-                    <div className="">
-                        <ul className={`${open ? "flex flex-col" : "hidden"} lg:hidden items-center gap-2 pb-5`}>
+                    <div className={`block lg:hidden overflow-hidden transition-[max-height] duration-500 ease-in-out md:overflow-visible md:max-h-full ${open ? "max-h-[500px]" : "max-h-0"} md:flex`}>
+                        <ul className='flex flex-col md:flex md:flex-row py-5 md:py-0 px-5 md:px-0 gap-4 md:gap-5 text-sm text-gray-400 font-medium w-full'>
                             <li>
                                 <TextElement textColor="text-primary-0" type="sm_500" respText="text-sm">Product</TextElement>
                             </li>
