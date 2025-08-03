@@ -24,15 +24,15 @@ const StoriesFragment = () => {
                 <div className="w-full max-w-10/12 lg:max-w-10/12 mx-auto lg:max-h-screen ">
                     <div className="grid grid-cols-1 lg:grid-cols-5  h-auto lg:h-screen py-8 lg:py-25 gap-y-13 lg:gap-y-0">
                         <div className="lg:col-span-3 flex flex-col gap-8 w-full">
-                            <div className="flex flex-col gap-3 w-[270px] lg:w-auto">
+                            <div className="flex flex-col gap-3 w-[270px] md:w-auto text-left md:text-center lg:text-left" data-aos="fade-down">
                                 <TextElement type="xl_600" respText='text-xs' textColor="text-primary-500" textTransform="uppercase" classname="">
                                     INCREASE PRODUCTIVITY
                                 </TextElement>
-                                <TextElement type="5xl_700" respText='text-2xl' textColor="text-secondary-700" textTransform="" classname="">
+                                <TextElement type="5xl_700" respText='text-2xl' textColor="text-secondary-700" textTransform="" classname="w-full md:w-[500px] lg:w-full mx-auto">
                                     Reduce Time in Doing Manual Work Managing Expenses
                                 </TextElement>
                             </div>
-                            <div className='flex flex-col gap-8 lg:gap-12.5 w-full'>
+                            <div className='flex flex-col gap-8 lg:gap-12.5 w-full md:w-2/3 lg:w-full mx-0 md:mx-auto lg:mx-0' data-aos="fade-up">
                                 <TabElement
                                     tabs={[
                                         { label: "With Spend.In", value: "with" },
@@ -43,7 +43,7 @@ const StoriesFragment = () => {
                                 {renderContent()}
                             </div>
                         </div>
-                        <div className="col-span-2 flex items-end">
+                        <div className="col-span-2 flex w-full justify-normal md:justify-center lg:justify-normal items-end" data-aos="fade-left">
                             <ImageElement path='stories' image={activeTab === 'with' ? 'with' : 'without'} format='svg'/>
                         </div>
                         

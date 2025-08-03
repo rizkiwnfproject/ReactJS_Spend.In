@@ -5,10 +5,10 @@ import ImageElement from '../../elements/image/ImageElement'
 
 const ActionFragment = () => {
     return (
-        <div className="bg-secondary-700 relative py-8 lg:py-0">
+        <div className="bg-secondary-700 relative py-8 md:py-10 lg:py-0">
             <div className="w-full max-w-10/12 lg:max-w-10/12 mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2">
-                    <div className="h-[600px] max-w-[600px] flex lg:items-center justify-start">
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                    <div className="h-[600px] md:h-auto lg:h-[600px] max-w-[600px] flex lg:items-center justify-start" data-aos="fade-right">
                         <div className="flex flex-col gap-6">
                             <div className="flex flex-col gap-3 max-w-[600px]">
                                 <TextElement type="xl_600" respText='text-xs' textColor="text-primary-500" textTransform="uppercase" classname="">
@@ -24,8 +24,8 @@ const ActionFragment = () => {
                             <ButtonElement typeButton='label' label='get a free demo' classname='lg:w-1/3 mt-8 lg:mt-4' textType='md_600' />
                         </div>
                     </div>
-                    <div className="h-[20px] lg:h-auto">
-                        <div className="absolute bottom-0 right-0 w-[350px] lg:w-[700px] h-[300px] lg:h-[450px] bg-secondary-100 rounded-tl-2xl">
+                    <div className="h-[20px] md:h-auto" >
+                        <div className="absolute bottom-0 right-0 w-[350px] lg:w-[700px] h-[300px] lg:h-[450px] bg-secondary-100 rounded-tl-2xl" data-aos="fade-up">
                             <ImageElement path='action' image='action-1' format='svg' classname='absolute bottom-0 right-0 w-[250px] h-[250px] object-cover object-top-left lg:h-auto lg:w-auto z-0' />
                             <ImageElement path='action' image='action-2' format='svg' classname='absolute bottom-0 w-[300px] h-[230px]  lg:h-auto lg:w-auto z-1' />
                         </div>

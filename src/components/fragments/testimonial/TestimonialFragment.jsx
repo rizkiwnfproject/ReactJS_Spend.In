@@ -59,7 +59,7 @@ const TestimonialFragment = () => {
       <div className="bg-secondary-700 py-10 lg:py-20">
         <div className="w-full max-w-10/12 lg:max-w-10/12 mx-auto max-h-screen">
           <div className="flex flex-col w-full mx-auto items-center justify-center gap-8 lg:gap-16">
-            <div className="flex flex-col gap-3 lg:gap-6 lg:text-center max-w-[580px]">
+            <div className="flex flex-col gap-3 lg:gap-6 md:text-center max-w-[580px]" data-aos="fade-down">
               <div className="flex flex-col gap-1.5 lg:gap-3">
                 <TextElement type="xl_600" respText='text-xs' textColor="text-primary-500" textTransform="uppercase" classname="">
                   WHAT THEY SAY
@@ -72,7 +72,7 @@ const TestimonialFragment = () => {
                 Here are some testimonials from our user after using Spend.In to manage their business  expenses.
               </TextElement>
             </div>
-            <div className="w-full">
+            <div className="w-full" data-aos="fade-up">
               <Swiper
                 className="mySwiper"
                 onSwiper={setSwiperInstance}
@@ -108,7 +108,7 @@ const TestimonialFragment = () => {
                 ))}
               </Swiper>
             </div>
-            <div className="w-full flex justify-center gap-6">
+            <div className="w-full flex justify-center gap-6" data-aos="fade-up">
               <ButtonElement typeButton='icon' padding='p-3' bgColor='bg-secondary-500' iconSize='23px' ref={prevRef} icon={HiArrowSmLeft} />
               <ButtonElement typeButton='icon' padding='p-3' iconSize='23px' ref={nextRef} icon={HiArrowSmRight} />
             </div>

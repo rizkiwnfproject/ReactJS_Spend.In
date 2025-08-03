@@ -12,7 +12,7 @@ const TabElement = ({ tabs, onTabChange }) => {
 
 
     return (
-        <div className="relative flex bg-secondary-100 rounded-full w-full lg:w-max gap-2">
+        <div className="relative flex bg-secondary-100 rounded-full w-full mx-auto lg:mx-0 md:w-max gap-2">
             <div
                 className="absolute top-0 left-0 h-[calc(100%)] w-[calc(50%)] bg-primary-500 rounded-full transition-transform duration-300 ease-in-out z-0"
                 style={{

@@ -8,35 +8,55 @@ import StoriesSection from "../components/sections/stories/StoriesSection"
 import TestimonialSection from "../components/sections/testimonial/TestimonialSection"
 import WorkSection from "../components/sections/works/WorksSection"
 
+import { Element } from 'react-scroll'
+
 const MainLayout = () => {
   return (
     <>
       <div className="fixed top-0 left-0 w-full z-50 bg-secondary-700 border border-b-secondary-500">
         <NavbarSection />
       </div>
-      <div className="">
-        <HeroSection />
-      </div>
-      <div className="">
-        <BenefitSection />
-      </div>
-      <div className="">
-        <WorkSection />
-      </div>
-      <div className="">
-        <StoriesSection />
-      </div>
-      <div className="">
-        <TestimonialSection />
-      </div>
-      <div className="">
-        <PriceSection />
-      </div>
-      <div className="">
-        <ActionSection />
-      </div>
-      <div className="">
-        <FooterSection />
+      <div className="overflow-hidden">
+        <Element name="hero" >
+          <section id="hero">
+            <HeroSection />
+          </section>
+        </Element >
+        <Element name="benefit">
+          <section id="benefit">
+            <BenefitSection />
+          </section>
+        </Element >
+        <Element name="works">
+          <section id="works">
+            <WorkSection />
+          </section>
+        </Element >
+        <Element name="stories">
+          <section id="works">
+            <StoriesSection />
+          </section>
+        </Element >
+        <Element name="testimonial">
+          <section id="works">
+            <TestimonialSection />
+          </section>
+        </Element >
+        <Element name="price">
+          <section id="price" className="scroll-mt-24">
+            <PriceSection />
+          </section>
+        </Element >
+        <Element name="action">
+          <section id="action">
+            <ActionSection />
+          </section>
+        </Element >
+        <Element name="contact">
+          <section id="action">
+            <FooterSection />
+          </section>
+        </Element >
       </div>
     </>
   )

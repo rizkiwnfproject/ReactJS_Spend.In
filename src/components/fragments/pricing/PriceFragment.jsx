@@ -13,7 +13,7 @@ const PriceFragment = () => {
                 <div className="w-full max-w-10/12 lg:max-w-10/12 mx-auto">
                     <div className="flex flex-col w-full mx-auto items-center gap-16">
                         <div className="space-y-7 lg:space-y-16">
-                            <div className="flex flex-col gap-3 lg:gap-6 text-center">
+                            <div className="flex flex-col gap-3 lg:gap-6 text-center" data-aos="fade-down">
                                 <TextElement type="5xl_700" respText='text-2xl' textColor="text-secondary-900" textTransform="" classname="">
                                     Ready to Get Started?
                                 </TextElement>
@@ -21,7 +21,7 @@ const PriceFragment = () => {
                                     Choose a plan that suits your business needs
                                 </TextElement>
                             </div>
-                            <div className="flex justify-center gap-2 lg:gap-6 text-center">
+                            <div className="flex justify-center gap-2 lg:gap-6 text-center" data-aos="fade-up">
                                 <TextElement type="xl_600" respText='text-xl' textColor="text-secondary-700" textTransform="" classname="">
                                     Monthly
                                 </TextElement>
@@ -31,7 +31,7 @@ const PriceFragment = () => {
                                 </TextElement>
                             </div>
                         </div>
-                        <div className="grid grid-cols-1 lg:grid-cols-3 w-full gap-6 lg:h-[710px]">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6 lg:h-[710px]" data-aos="fade-up">
                             <div className="bg-secondary-100/30 p-8 rounded-xl h-full">
                                 <ImageLabel path="pricing" image='free' format="svg" label='Free' textType='3xl_600' textColor='text-secondary-700' respText='text-xl'/>
                                 <TextElement type='md_400' respText='text-sm' textColor='text-secondary-400' classname='pt-3'>Perfect plan to get started</TextElement>
